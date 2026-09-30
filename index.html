@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#12665d">
+  <meta name="description" content="2026년 10월 2–4일, 우리 둘의 다낭·호이안 여행 일지">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="default">
+  <title>다낭 일지</title>
+  <link rel="icon" href="./icon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="./icons/icon-192.png">
+  <link rel="manifest" href="./manifest.webmanifest">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="">
+  <link rel="stylesheet" href="./styles.css">
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin="" defer></script>
+  <script src="./data.js" defer></script>
+  <script src="./map.js" defer></script>
+  <script src="./app.js" defer></script>
+</head>
+<body>
+  <a class="skip" href="#main">본문으로</a>
+  <header class="topbar"><a class="brand" href="#home"><span class="brand-mark">D.</span><span>다낭 일지</span></a><span class="trip-label">둘이서, 다낭 <span>2026</span></span></header>
+  <main id="main" tabindex="-1"></main>
+  <nav class="bottom-nav" aria-label="메인 메뉴"></nav>
+  <div id="toast" role="status" aria-live="polite"></div>
+  <noscript>일정과 지도를 보려면 브라우저에서 JavaScript를 켜주세요.</noscript>
+</body>
+</html>
