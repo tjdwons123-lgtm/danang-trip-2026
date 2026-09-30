@@ -15,6 +15,7 @@ main:focus{outline:none}
 .trip-map .leaflet-popup-content a{color:var(--green)}
 .map-marker{display:grid;place-items:center;min-width:36px;height:36px;padding:0 4px;border-radius:100%;background:var(--green);color:white;border:3px solid white;box-shadow:0 3px 10px #183b374d;font-size:12px;font-weight:800;white-space:nowrap}
 .map-marker.area{background:#b75f31}
+.map-marker.candidate{background:#fff;color:#a93f70;border:3px dashed #a93f70}
 .map-marker.optional{background:white;color:var(--green);border:3px solid var(--green);font-size:18px}
 .map-route-line{stroke-dasharray:9 8;animation:route-flow 4s linear infinite}
 @keyframes route-flow{to{stroke-dashoffset:-34}}

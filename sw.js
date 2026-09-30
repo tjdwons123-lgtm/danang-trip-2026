@@ -1,5 +1,5 @@
 const CACHE_PREFIX = 'ddip-danang-';
-const CACHE = `${CACHE_PREFIX}v9`;
+const CACHE = `${CACHE_PREFIX}v10`;
 const FILES = ['./','./index.html','./styles.css','./data.js','./map.js','./app.js','./manifest.webmanifest','./icon.svg','./icons/icon-192.png','./icons/icon-512.png'];
 self.addEventListener('install',event=>{event.waitUntil(caches.open(CACHE).then(cache=>cache.addAll(FILES)).then(()=>self.skipWaiting()));});
 self.addEventListener('activate',event=>{event.waitUntil(caches.keys().then(keys=>Promise.all(keys.filter(key=>key.startsWith(CACHE_PREFIX)&&key!==CACHE).map(key=>caches.delete(key)))).then(()=>self.clients.claim()));});
