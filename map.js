@@ -65,7 +65,7 @@
     const ids = day.mapRoute;
     const line = ids.map(id => stop(id).coordinates);
     L.polyline(line, {color:'#ffffff',weight:7,opacity:.9,interactive:false}).addTo(map);
-    L.polyline(line, {color:dayIndex === 1 ? '#b75f31' : '#12665d',weight:3,opacity:.95,className:'map-route-line',interactive:false}).addTo(map);
+    L.polyline(line, {color:dayIndex === 1 ? '#c96485' : '#a93f70',weight:3,opacity:.95,className:'map-route-line',interactive:false}).addTo(map);
     [...new Set(ids)].forEach(id => {
       const order = ids.flatMap((routeId,index) => routeId === id ? [index+1] : []).join('·');
       numberedMarker(map,stop(id),order,'route','오늘의 경유지');
