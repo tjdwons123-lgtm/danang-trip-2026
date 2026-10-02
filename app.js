@@ -168,5 +168,9 @@ window.addEventListener('hashchange',()=>{render();window.scrollTo({top:0,behavi
 window.addEventListener('beforeinstallprompt',event=>{event.preventDefault();installPrompt=event;if(!location.hash||location.hash==='#home')render();});
 window.addEventListener('offline',()=>toast('오프라인이에요. 지도와 외부 링크는 연결 후 이용해주세요.'));
 window.addEventListener('online',()=>toast('인터넷에 다시 연결됐어요.'));
-if('serviceWorker' in navigator&&['https:','http:'].includes(location.protocol))navigator.serviceWorker.register('./sw.js').then(()=>updateOfflineStatus()).catch(()=>{});
+if('serviceWorker' in navigator&&['https:','http:'].includes(location.protocol)){
+  const hadController=Boolean(navigator.serviceWorker.controller);
+  if(hadController) navigator.serviceWorker.addEventListener('controllerchange',()=>location.reload(),{once:true});
+  navigator.serviceWorker.register('./sw.js').then(registration=>{updateOfflineStatus();registration.update().catch(()=>{});}).catch(()=>{});
+}
 render();
