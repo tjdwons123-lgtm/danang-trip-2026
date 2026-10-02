@@ -95,17 +95,17 @@ window.TRIP = {
     {
       date: '2026-10-04', label: '10.04', weekday: '일요일', short: '바다와 쉼', title: '바다에서 쉬고, 가볍게 돌아가기',
       description: '미케비치에서 쉬고 목식당에서 해산물 점심. 마지막 저녁은 헬리오에서.', tags: ['미케비치', '목식당', 'Cong Spa', '23:00 출국'],
-      warning: '21:00 공항 도착은 현재 계획상 목표예요. 항공사 체크인 마감 확인이 필요하며 혼잡·비 예보 시 헬리오를 줄이고 더 일찍 이동하세요.',
+      warning: '콩스파 17:00 종료 후 헬리오는 18:00 도착 목표예요. 이동이 늦으면 카페·쇼핑을 생략하세요. 21:00 공항 도착은 계획상 목표이므로 혼잡·비 예보 시 저녁을 줄이고 더 일찍 이동하세요.',
       rain: '바다 수영 대신 해변 카페에서 쉬기. 헬리오 야외 운영이 어렵다면 시내 실내 식당으로 대체하고 공항으로 일찍 이동하세요.',
       route: [['숙소', 'Val Soleil Hotel Da Nang'], ['미케비치', 'My Khe Beach Da Nang'], ['목식당', 'MOC Quan Seafood 26 To Hien Thanh Da Nang'], ['콩스파 후보', 'Cong Spa and Nail 80 Tran Phu Da Nang'], ['헬리오', 'Helio Center Da Nang'], ['숙소·짐', 'Val Soleil Hotel Da Nang'], ['공항', 'Da Nang International Airport']],
       mapRoute: ['hotel','beach','moc','congSpa','helio','hotel','airport'], mapOptional: ['dCafe','dragonMarket'],
       events: [
         ['아침', '조식 · 체크아웃', '캐리어는 호텔 보관 요청. 짐 보관과 해변 후 씻을 곳을 미리 확인해요.', 'hotel', '', 'Val Soleil Hotel Da Nang'],
         ['10:30–12:00', '미케비치', '바다 산책 · 해변 카페 · 휴식. 수영은 기상·현장 안전 안내와 샤워 가능 여부를 확인한 뒤.', 'beach', '수영 선택', 'My Khe Beach Da Nang'],
-        ['12:20–13:40', '목식당 · 해산물 점심', '26 Tô Hiến Thành. 예약하고 방문하면 대기를 줄일 수 있어요. 14:30 마사지 지점까지 이동시간은 예약 후 확인하세요.', 'food', '예약 권장', 'MOC Quan Seafood 26 To Hien Thanh Da Nang'],
-        ['14:30–16:00', 'Cong Spa · 90분', '커플 2명, 같은 룸 요청. 지도에는 80 Trần Phú 지점을 후보로 표시했어요. 실제 예약 지점·코스·완료 여부는 확인 필요.', 'spa', '지점 미확정', 'Cong Spa and Nail 80 Tran Phu Da Nang'],
-        ['16:00 이후', '카페 또는 가벼운 쇼핑', '게시물 후보는 D 카페·드래곤 마켓. 콩스파 지점이 정해지면 이동이 편한 한 곳만 선택하세요.', 'coffee', '선택', ''],
-        ['17:30–19:30', '헬리오에서 마지막 저녁', 'B.Fair · 먹거리 · 게임은 해당일 실제 운영 확인 후 이용. 운영이 다르면 시내 저녁으로 대체.', 'food', '운영 미확인', 'Helio Center Da Nang'],
+        ['12:20–13:40', '목식당 · 해산물 점심', '26 Tô Hiến Thành. 예약하고 방문하면 대기를 줄일 수 있어요. 15:30 마사지 지점까지 이동시간은 예약 후 확인하세요.', 'food', '예약 권장', 'MOC Quan Seafood 26 To Hien Thanh Da Nang'],
+        ['15:30–17:00', 'Cong Spa · 90분', '커플 2명, 같은 룸 요청. 지도에는 80 Trần Phú 지점을 후보로 표시했어요. 실제 예약 지점·코스·완료 여부는 확인 필요.', 'spa', '지점 미확정', 'Cong Spa and Nail 80 Tran Phu Da Nang'],
+        ['17:00 이후', '가까운 카페 또는 바로 헬리오로', '쇼핑까지 넣으면 헬리오가 촉박해요. 콩스파 지점 근처에서 짧게 쉬거나 바로 이동하세요.', 'coffee', '선택', ''],
+        ['18:00–19:30', '헬리오에서 마지막 저녁', 'B.Fair · 먹거리 · 게임은 해당일 실제 운영 확인 후 이용. 이동이 늦으면 카페를 생략하고 바로 오세요.', 'food', '운영 미확인', 'Helio Center Da Nang'],
         ['20:00 전후', '호텔에서 캐리어 픽업', '짐을 챙기고 여권·항공편 다시 확인.', 'hotel', '', 'Val Soleil Hotel Da Nang'],
         ['20:30 전후', '공항으로 출발', 'Grab 대기와 교통을 감안해요. 늦어지면 저녁 일정을 먼저 줄이기.', 'car', '이동 목표', 'Da Nang International Airport'],
         ['21:00 목표', '다낭공항 도착', '체크인 · 수하물 위탁 · 출국심사. 항공사 권장 도착시간 우선.', 'flight', '', 'Da Nang International Airport'],
@@ -123,12 +123,12 @@ window.TRIP = {
     {name:'여울 한식당',type:'food',day:1,area:'다낭 한강변',description:'우대갈비·삼겹살·국밥을 소개한 한식당. 호이안 출발 전 점심으로는 이동·식사 시간을 먼저 확인해야 해요.',query:'Da Nang Yeoul Korean Restaurant',mapUrl:'https://maps.app.goo.gl/Qx7sr1VDYChGvcSy6',status:'점심 대안',source:'https://www.instagram.com/p/Db2uaGwRPu7/'},
     {name:'골목에서 쉬는 카페',type:'cafe',day:1,area:'호이안 올드타운',description:'더운 오후에 잠시 쉬는 자리. 특정 가게는 아직 정하지 않았어요.',query:'cafe Hoi An Ancient Town',status:'가게 미정'},
     {name:'바다를 보는 카페',type:'cafe',day:2,area:'미케비치',description:'해변 산책과 연결. 비가 오면 수영 대신 오래 쉬어가도 좋아요.',query:'beachfront cafe My Khe Da Nang',status:'가게 미정'},
-    {name:'마사지 후 커피',type:'cafe',day:2,area:'다낭 시내',description:'16시 이후 선택 일정. 콩스파 지점 확정 후 근처 카페를 골라요.',query:'cafe Da Nang',status:'가게 미정'},
+    {name:'마사지 후 커피',type:'cafe',day:2,area:'다낭 시내',description:'17시 이후 짧게 들르는 선택 일정. 콩스파 지점 확정 후 근처 카페를 고르고, 헬리오 이동이 늦으면 생략하세요.',query:'cafe Da Nang',status:'가게 미정'},
     {name:'콩카페 · Bạch Đằng',type:'cafe',day:1,area:'다낭 시내 · 96 Bạch Đằng',description:'게시물 추천 메뉴는 녹색 쌀·코코넛 스무디. 공식 지점 안내는 매일 07:00–23:30, 메뉴 판매는 당일 확인.',query:'Cong Caphe 96 Bach Dang Da Nang',status:'10/3 오전 선택',source:'https://www.instagram.com/p/DZUleWYTamH/',website:'https://congcaphe.com/store-detail/da-nang/469/cong-ca-phe-bach-dang'},
     {name:'D 카페',type:'cafe',day:2,area:'안트엉 · 미케비치 남쪽',description:'게시물 추천은 말차 딸기 라떼. 미케비치 산책 후 카페 후보로, 정확한 영업시간은 확인 전.',query:'D Cafe An Thuong Da Nang',mapUrl:'https://maps.app.goo.gl/jBGvVDfRb6ys6qGt8',status:'10/4 선택',source:'https://www.instagram.com/p/Db2uaGwRPu7/'},
     {name:'드래곤 마켓',type:'shop',day:2,area:'미케비치 근처 · 49 Trần Bạch Đằng',description:'기념품·간식·커피·의류를 보는 실내 매장. 공식 사이트 기준 매일 10:00–22:00. 10/4 쇼핑 시간에 선택 가능.',query:'Dragon Market 49 Tran Bach Dang Da Nang',status:'10/4 쇼핑 후보',source:'https://www.instagram.com/p/DarbA_wzLHT/',website:'https://danang-market.com/en'},
     {name:'한시장 쇼핑 메모',type:'shop',day:1,area:'한시장 · 다낭 시내',description:'게시물은 1층 식품·과일, 2층 의류·신발·가방을 소개해요. 2024년 가격표는 현재 시세로 보지 마세요.',query:'Han Market Da Nang',status:'10/3 오전',source:'https://www.instagram.com/p/DBOCjvPJKhi/'},
     {name:'화이트 오키드 스파 · White Orchids Spa',type:'spa',day:1,area:'15 Mạc Đĩnh Chi · 호이안',description:'10/3 19:30 예약, 19:10 야시장 근처 픽업. 정확한 만남 장소·마사지 코스·소요 시간·다낭 복귀 차량은 예약 메시지로 확인하세요. 공식 사이트 주소 기준.',query:'White Orchids Spa Hoi An 15 Mac Dinh Chi',website:'https://whiteorchidspahoian.com/',status:'10/3 19:30 예약 · 19:10 픽업'},
-    {name:'Cong Spa',type:'spa',day:2,area:'80 Trần Phú · 후보 지점',description:'14:30 · 90분 · 2명. Cộng Spa & Nail의 공식 주소 80 Trần Phú를 후보 핀으로 표시했어요. 예약 시 실제 지점을 확인하고 첫날과 다른 코스를 선택하세요.',query:'Cong Spa and Nail 80 Tran Phu Da Nang',website:'https://congspanail.com/',status:'지점 미확정 · 후보 핀'}
+    {name:'Cong Spa',type:'spa',day:2,area:'80 Trần Phú · 후보 지점',description:'15:30–17:00 · 90분 · 2명. Cộng Spa & Nail의 공식 주소 80 Trần Phú를 후보 핀으로 표시했어요. 예약 시 실제 지점을 확인하고 첫날과 다른 코스를 선택하세요.',query:'Cong Spa and Nail 80 Tran Phu Da Nang',website:'https://congspanail.com/',status:'지점 미확정 · 후보 핀'}
   ]
 };
