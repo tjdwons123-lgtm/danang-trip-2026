@@ -6,12 +6,12 @@
   const placeAnchors = {
     '퍼꾸 하노이 · Phở Cù Hà Nội':'phoCu',
     '미꽝 또는 반쎄오':'cathedral',
-    '호이안 저녁 식당':'hoian',
+    '미스리 카페 22 · Miss Ly':'missLy',
     '반미 해피 브레드 · Happy Bread Mì AA':'happyBread',
     '헬리오 먹거리':'helio',
     'SAILS AND SKEWERS':'sails',
     '여울 한식당':'yeoul',
-    '골목에서 쉬는 카페':'hoian',
+    '우베베 호이안 · Ubebe':'ubebe',
     '바다를 보는 카페':'beach',
     '마사지 후 커피':'hotel',
     '콩카페 · Bạch Đằng':'congCafe',
@@ -83,7 +83,7 @@
     const ids = window.TRIP.days[dayIndex].mapRoute;
     if (area === 'danang') fit(activeMap,ids.filter(id => !id.startsWith('hoian')));
     else if (area === 'pho') activeMap.setView(stop('phoCu').coordinates,17);
-    else if (area === 'hoian') fit(activeMap,['hoian','hoianBridge','hoianNight','whiteOrchid'],16);
+    else if (area === 'hoian') fit(activeMap,['hoian','ubebe','hoianBridge','missLy','hoianNight','whiteOrchid'],16);
     else if (area === 'spa') activeMap.setView(stop(dayIndex === 1 ? 'whiteOrchid' : 'congSpa').coordinates,17);
     else fit(activeMap,[...new Set(ids),...(window.TRIP.days[dayIndex].mapOptional || [])]);
   }
