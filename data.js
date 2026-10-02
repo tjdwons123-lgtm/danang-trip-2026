@@ -18,7 +18,7 @@ window.TRIP = {
     dCafe: {name:'D 카페', coordinates:[16.0516208,108.2436937], query:'D Coffee An Thuong Da Nang'},
     dragonMarket: {name:'드래곤 마켓', coordinates:[16.0565235,108.2456539], query:'Dragon Market 49 Tran Bach Dang Da Nang'},
     congCafe: {name:'콩카페 · Bạch Đằng', coordinates:[16.0690486,108.2248767], query:'Cong Caphe 96 Bach Dang Da Nang'},
-    lateNightArea: {name:'호텔 주변 야식 후보', coordinates:[16.069,108.2238], query:'late night pho near Val Soleil Hotel Da Nang', approximate:true},
+    phoCu: {name:'퍼꾸 하노이', coordinates:[16.0659471,108.2237674], query:'Phở Cù Hà Nội 05 Trần Quốc Toản Đà Nẵng', priority:1000},
     helio: {name:'헬리오', coordinates:[16.0361828,108.2247241], query:'Helio Center Da Nang'},
     bridge: {name:'용다리', coordinates:[16.0611682,108.2278968], query:'Dragon Bridge Da Nang'}
   },
@@ -59,15 +59,15 @@ window.TRIP = {
   days: [
     {
       date: '2026-10-02', label: '10.02', weekday: '금요일', short: '도착하는 밤', title: '가볍게 시작하는 첫날 밤',
-      description: '공항에서 숙소로. 늦은 한 끼와 짧은 산책이면 충분해요.', tags: ['도착', '야식', '무리하지 않기'],
-      warning: '입국·수하물 대기에 따라 체크인과 야식 시간이 늦어질 수 있어요. 호텔에 늦은 체크인을 알려주세요.',
-      rain: '야경 산책은 생략하고 체크인 후 쉬기. 늦은 야식은 호텔에 영업 중인 식당을 확인하세요.',
-      route: [['다낭공항', 'Da Nang International Airport'], ['발솔레일', 'Val Soleil Hotel Da Nang'], ['근처 야식', 'late night pho near Val Soleil Hotel Da Nang']],
-      mapRoute: ['airport','hotel','lateNightArea'], mapOptional: ['bridge'],
+      description: '공항에서 숙소로. 체크인 후 근처 퍼꾸 하노이에서 쌀국수 한 그릇.', tags: ['도착', '퍼꾸 하노이', '무리하지 않기'],
+      warning: '입국·수하물 대기에 따라 체크인이 늦어질 수 있어요. 호텔에 늦은 체크인을 알려주세요. 퍼꾸 하노이는 24시간 영업으로 안내되지만 당일 현장 영업을 확인하세요.',
+      rain: '야경 산책은 생략하고 체크인 후 퍼꾸 하노이에서 식사. 피곤하면 야식도 생략하고 쉬세요.',
+      route: [['다낭공항', 'Da Nang International Airport'], ['발솔레일', 'Val Soleil Hotel Da Nang'], ['퍼꾸 하노이', 'Phở Cù Hà Nội 05 Trần Quốc Toản Đà Nẵng'], ['숙소 복귀', 'Val Soleil Hotel Da Nang']],
+      mapRoute: ['airport','hotel','phoCu','hotel'], mapOptional: ['bridge'],
       events: [
         ['21:30', '다낭공항 도착', '입국심사 · 수하물 찾기 · Grab 호출', 'flight', '항공 일정', 'Da Nang International Airport'],
         ['22:30–23:00', '발솔레일 체크인', '공항에서 Grab으로 이동. 도착 예상 시각이며 객실 예약 여부는 별도 확인.', 'hotel', '예상', 'Val Soleil Hotel Da Nang'],
-        ['23:00 이후', '따뜻한 야식 한 그릇', '호텔 근처 쌀국수 등. 가게는 아직 미정이며 늦은 영업 여부 확인 필요.', 'food', '후보 미정', 'late night pho near Val Soleil Hotel Da Nang'],
+        ['체크인 후', '퍼꾸 하노이 · 쌀국수', '05 Trần Quốc Toản. Google 지도에는 24시간 영업으로 안내돼요. 숙소 근처지만 늦은 밤 실제 영업은 방문 직전 확인하세요.', 'food', '방문 계획', 'Phở Cù Hà Nội 05 Trần Quốc Toản Đà Nẵng'],
         ['체력이 남으면', '한강 · 용다리 야경', '짧게 산책하고 숙소로. 공연 관람 일정은 아니에요.', 'walk', '선택', 'Dragon Bridge Da Nang']
       ]
     },
@@ -114,7 +114,7 @@ window.TRIP = {
     }
   ],
   places: [
-    {name:'첫날 늦은 쌀국수',type:'food',day:0,area:'호텔 근처',description:'23시 이후 이용 가능한 가게를 고를 예정. 영업 여부 확인 전이에요.',query:'late night pho near Val Soleil Hotel Da Nang',status:'가게 미정'},
+    {name:'퍼꾸 하노이 · Phở Cù Hà Nội',type:'food',day:0,area:'05 Trần Quốc Toản · 호텔 근처',description:'10/2 호텔 체크인 후 야식으로 방문. Google 지도에는 24시간 영업으로 안내되지만, 늦은 밤 현장 영업을 다시 확인하세요.',query:'Phở Cù Hà Nội 05 Trần Quốc Toản Đà Nẵng',status:'10/2 체크인 후'},
     {name:'미꽝 또는 반쎄오',type:'food',day:1,area:'다낭 시내',description:'11:20 점심. 한시장·성당에서 멀리 벗어나지 않는 곳으로 고를 예정.',query:'Mi Quang near Da Nang Cathedral',status:'가게 미정'},
     {name:'호이안 저녁 식당',type:'food',day:1,area:'호이안 올드타운',description:'17:30 식사 후 등불거리로. 줄이 길면 다른 곳으로 바꾸기.',query:'restaurants Hoi An Ancient Town',status:'가게 미정'},
     {name:'목식당 · MỘC Quán Seafood',type:'food',day:2,area:'26 Tô Hiến Thành · 안하이',description:'10/4 12:20 해산물 점심 계획. 공식 사이트 기준 매일 10:30–23:45(주문 마감 22:30), 전화 +84 90 566 50 58. 수조 해산물은 주문 전에 무게·가격을 확인하세요.',query:'MOC Quan Seafood 26 To Hien Thanh Da Nang',website:'https://mocseafood.com/moc-da-nang',bookingUrl:'https://mocseafood.com/dat-ban',kakaoUrl:'https://pf.kakao.com/_AxcgZxj',status:'10/4 점심 · 예약 권장'},

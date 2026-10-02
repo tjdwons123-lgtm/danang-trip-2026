@@ -4,7 +4,7 @@
   const searchUrl = query => `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(query)}`;
   const stop = id => window.TRIP.mapStops[id];
   const placeAnchors = {
-    '첫날 늦은 쌀국수':'lateNightArea',
+    '퍼꾸 하노이 · Phở Cù Hà Nội':'phoCu',
     '미꽝 또는 반쎄오':'cathedral',
     '호이안 저녁 식당':'hoian',
     '목식당 · MỘC Quán Seafood':'moc',
@@ -82,6 +82,7 @@
     if (!activeMap) return;
     const ids = window.TRIP.days[dayIndex].mapRoute;
     if (area === 'danang') fit(activeMap,ids.filter(id => !id.startsWith('hoian')));
+    else if (area === 'pho') activeMap.setView(stop('phoCu').coordinates,17);
     else if (area === 'hoian') fit(activeMap,['hoian','hoianBridge','hoianNight','whiteOrchid'],16);
     else if (area === 'spa') activeMap.setView(stop(dayIndex === 1 ? 'whiteOrchid' : 'congSpa').coordinates,17);
     else fit(activeMap,[...new Set(ids),...(window.TRIP.days[dayIndex].mapOptional || [])]);
