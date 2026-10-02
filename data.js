@@ -11,7 +11,7 @@ window.TRIP = {
     hoianNight: {name:'호이안 야시장', coordinates:[15.8757772,108.3259285], query:'Hoi An Night Market'},
     beach: {name:'미케비치', coordinates:[16.0756254,108.2468784], query:'My Khe Beach Da Nang'},
     moc: {name:'목식당', coordinates:[16.0639457,108.2414873], query:'MOC Quan Seafood 26 To Hien Thanh Da Nang'},
-    ohio: {name:'Ohio Spa', coordinates:[16.070038,108.2239311], query:'Ohio Spa 74 Tran Phu Da Nang', priority:1000},
+    whiteOrchid: {name:'화이트 오키드 스파', coordinates:[15.88823,108.32918], query:'White Orchids Spa Hoi An 15 Mac Dinh Chi', priority:1000},
     congSpa: {name:'Cong Spa · 80 Trần Phú 후보', coordinates:[16.0697633,108.2238916], query:'Cong Spa and Nail 80 Tran Phu Da Nang', candidate:true, priority:1000},
     sails: {name:'SAILS AND SKEWERS', coordinates:[16.0518012,108.24807], query:'SAILS AND SKEWERS Da Nang'},
     yeoul: {name:'여울 한식당', coordinates:[16.0670154,108.2247164], query:'Da Nang Yeoul Korean Restaurant'},
@@ -73,11 +73,11 @@ window.TRIP = {
     },
     {
       date: '2026-10-03', label: '10.03', weekday: '토요일', short: '호이안의 등불', title: '낮의 골목, 밤의 등불',
-      description: '다낭에서 느긋한 오전을 보내고, 호이안의 저녁을 만나러 가요.', tags: ['한시장', '호이안', 'Ohio Spa'],
-      warning: '20:30 마사지 기준으로 19:15 출발을 목표로 해요. 19:30은 여유가 적을 수 있어요. 비·교통 상황에 따라 야경을 줄이고 더 일찍 출발하세요.',
+      description: '다낭에서 느긋한 오전을 보내고, 호이안의 저녁과 마사지를 즐겨요.', tags: ['한시장', '호이안', '19:10 픽업', '화이트 오키드'],
+      warning: '19:10 야시장 근처 픽업이 예약되어 있어요. 정확한 만남 장소를 업체에 확인하고 19:00까지 도착하세요. 마사지 후 다낭 숙소 복귀 차량·종료 시각은 확인이 필요해요.',
       rain: '한시장·카페 위주로 쉬어가기. 호이안은 당일 침수·기상 상황을 확인하고, 악천후에는 다낭에 머무르세요. 소원배는 생략 가능.',
-      route: [['숙소', 'Val Soleil Hotel Da Nang'], ['한시장', 'Han Market Da Nang'], ['핑크성당', 'Da Nang Cathedral'], ['호이안', 'Hoi An Ancient Town'], ['일본교', 'Chua Cau Japanese Covered Bridge Hoi An'], ['야시장', 'Hoi An Night Market'], ['Ohio Spa', 'Ohio Spa 74 Tran Phu Da Nang'], ['숙소', 'Val Soleil Hotel Da Nang']],
-      mapRoute: ['hotel','han','cathedral','hoian','hoianBridge','hoianNight','ohio','hotel'],
+      route: [['숙소', 'Val Soleil Hotel Da Nang'], ['한시장', 'Han Market Da Nang'], ['핑크성당', 'Da Nang Cathedral'], ['호이안', 'Hoi An Ancient Town'], ['일본교', 'Chua Cau Japanese Covered Bridge Hoi An'], ['야시장·픽업', 'Hoi An Night Market'], ['화이트 오키드', 'White Orchids Spa Hoi An 15 Mac Dinh Chi'], ['숙소', 'Val Soleil Hotel Da Nang']],
+      mapRoute: ['hotel','han','cathedral','hoian','hoianBridge','hoianNight','whiteOrchid','hotel'],
       events: [
         ['08:30–09:30', '호텔 조식', '천천히 먹고 나갈 준비.', 'food', '', ''],
         ['09:45–10:45', '한시장', '1층 식품·과일, 2층 의류·신발·가방을 둘러볼 수 있어요. 2024년 게시물의 가격표는 참고하지 말고, 산 짐은 호이안 출발 전 숙소에 두세요.', 'shop', '', 'Han Market Da Nang'],
@@ -86,10 +86,10 @@ window.TRIP = {
         ['12:30', '호이안으로 출발', '호텔 또는 시내 출발. 13:20–13:30 도착 예상, 실제 교통에 따라 달라져요.', 'car', '예상', 'Hoi An Ancient Town'],
         ['13:30–17:30', '호이안 골목에서 느긋하게', '올드타운 · 일본교 · 상점 · 카페 · 강변. 정해진 순서 없이 쉬엄쉬엄. 오행산·코코넛배는 제외.', 'walk', '', 'Japanese Covered Bridge Hoi An'],
         ['17:30', '호이안 저녁', '야경 동선 근처에서 식사. 구체적인 가게는 미정.', 'food', '후보 미정', 'restaurants Hoi An Ancient Town'],
-        ['18:30–19:10', '등불거리와 강변 야경', '소원배는 날씨·대기시간에 따라 선택. 마사지 복귀 시간을 우선해요.', 'walk', '소원배 선택', 'Hoi An Night Market'],
-        ['19:15 목표', '다낭으로 돌아가기', '19:15–19:30 출발 계획. 차 호출·승차 지점까지 걷는 시간을 포함해 미리 준비.', 'car', '시간 주의', 'Ohio Spa 74 Tran Phu Da Nang'],
-        ['20:30–22:00', 'Ohio Spa · 90분', '커플 2명, 같은 룸 요청. 코스·예약 완료·커플룸 확약은 아직 미확인.', 'spa', '시간 고정 계획', 'Ohio Spa 74 Tran Phu Da Nang'],
-        ['22:00 이후', '숙소로, 오늘은 푹 쉬기', '필요하면 간단한 야식이나 맥주.', 'hotel', '', 'Val Soleil Hotel Da Nang']
+        ['18:30–19:00', '등불거리와 강변 야경', '소원배는 대기시간이 길면 생략. 19:00까지 픽업 장소에 도착하세요.', 'walk', '소원배 선택', 'Hoi An Night Market'],
+        ['19:10', '야시장 근처에서 픽업', '화이트 오키드 스파 차량. 정확한 만남 지점은 예약 메시지로 확인하세요. 지도 핀은 야시장 위치를 가리켜요.', 'car', '예약된 픽업', 'Hoi An Night Market'],
+        ['19:30', '화이트 오키드 스파 마사지', '15 Mạc Đĩnh Chi, 호이안. 예약된 코스·소요 시간·같은 룸 여부는 확인 메시지 기준.', 'spa', '예약 완료', 'White Orchids Spa Hoi An 15 Mac Dinh Chi'],
+        ['마사지 후', '다낭 숙소로 복귀', '호이안→다낭 복귀 차량·픽업 포함 여부를 업체에 확인하세요. 종료 시각을 확인하면 귀가 동선을 확정할 수 있어요.', 'hotel', '이동 확인 필요', 'Val Soleil Hotel Da Nang']
       ]
     },
     {
@@ -128,7 +128,7 @@ window.TRIP = {
     {name:'D 카페',type:'cafe',day:2,area:'안트엉 · 미케비치 남쪽',description:'게시물 추천은 말차 딸기 라떼. 미케비치 산책 후 카페 후보로, 정확한 영업시간은 확인 전.',query:'D Cafe An Thuong Da Nang',mapUrl:'https://maps.app.goo.gl/jBGvVDfRb6ys6qGt8',status:'10/4 선택',source:'https://www.instagram.com/p/Db2uaGwRPu7/'},
     {name:'드래곤 마켓',type:'shop',day:2,area:'미케비치 근처 · 49 Trần Bạch Đằng',description:'기념품·간식·커피·의류를 보는 실내 매장. 공식 사이트 기준 매일 10:00–22:00. 10/4 쇼핑 시간에 선택 가능.',query:'Dragon Market 49 Tran Bach Dang Da Nang',status:'10/4 쇼핑 후보',source:'https://www.instagram.com/p/DarbA_wzLHT/',website:'https://danang-market.com/en'},
     {name:'한시장 쇼핑 메모',type:'shop',day:1,area:'한시장 · 다낭 시내',description:'게시물은 1층 식품·과일, 2층 의류·신발·가방을 소개해요. 2024년 가격표는 현재 시세로 보지 마세요.',query:'Han Market Da Nang',status:'10/3 오전',source:'https://www.instagram.com/p/DBOCjvPJKhi/'},
-    {name:'Ohio Spa & Massage',type:'spa',day:1,area:'74 Trần Phú · 사용자 제공',description:'20:30 · 90분 · 2명. 같은 룸 요청, 코스와 예약 상태는 확인 전.',query:'Ohio Spa 74 Tran Phu Da Nang',status:'예약 상태 미확인'},
+    {name:'화이트 오키드 스파 · White Orchids Spa',type:'spa',day:1,area:'15 Mạc Đĩnh Chi · 호이안',description:'10/3 19:30 예약, 19:10 야시장 근처 픽업. 정확한 만남 장소·마사지 코스·소요 시간·다낭 복귀 차량은 예약 메시지로 확인하세요. 공식 사이트 주소 기준.',query:'White Orchids Spa Hoi An 15 Mac Dinh Chi',website:'https://whiteorchidspahoian.com/',status:'10/3 19:30 예약 · 19:10 픽업'},
     {name:'Cong Spa',type:'spa',day:2,area:'80 Trần Phú · 후보 지점',description:'14:30 · 90분 · 2명. Cộng Spa & Nail의 공식 주소 80 Trần Phú를 후보 핀으로 표시했어요. 예약 시 실제 지점을 확인하고 첫날과 다른 코스를 선택하세요.',query:'Cong Spa and Nail 80 Tran Phu Da Nang',website:'https://congspanail.com/',status:'지점 미확정 · 후보 핀'}
   ]
 };

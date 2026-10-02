@@ -18,7 +18,7 @@
     'D 카페':'dCafe',
     '드래곤 마켓':'dragonMarket',
     '한시장 쇼핑 메모':'han',
-    'Ohio Spa & Massage':'ohio',
+    '화이트 오키드 스파 · White Orchids Spa':'whiteOrchid',
     'Cong Spa':'congSpa'
   };
 
@@ -82,8 +82,8 @@
     if (!activeMap) return;
     const ids = window.TRIP.days[dayIndex].mapRoute;
     if (area === 'danang') fit(activeMap,ids.filter(id => !id.startsWith('hoian')));
-    else if (area === 'hoian') fit(activeMap,['hoian','hoianBridge','hoianNight'],16);
-    else if (area === 'spa') activeMap.setView(stop(dayIndex === 1 ? 'ohio' : 'congSpa').coordinates,17);
+    else if (area === 'hoian') fit(activeMap,['hoian','hoianBridge','hoianNight','whiteOrchid'],16);
+    else if (area === 'spa') activeMap.setView(stop(dayIndex === 1 ? 'whiteOrchid' : 'congSpa').coordinates,17);
     else fit(activeMap,[...new Set(ids),...(window.TRIP.days[dayIndex].mapOptional || [])]);
   }
 
