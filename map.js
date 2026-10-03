@@ -7,7 +7,7 @@
     '퍼꾸 하노이 · Phở Cù Hà Nội':'phoCu',
     '미꽝 또는 반쎄오':'cathedral',
     '미스리 카페 22 · Miss Ly':'missLy',
-    '반미 해피 브레드 · Happy Bread Mì AA':'happyBread',
+    '목식당 · MỘC Quán Seafood':'moc',
     '헬리오 먹거리':'helio',
     'SAILS AND SKEWERS':'sails',
     '여울 한식당':'yeoul',
